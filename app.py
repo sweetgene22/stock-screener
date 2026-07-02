@@ -1,4 +1,6 @@
 import streamlit as st
+import yfinance as yf
+import pandas as pd
 
 st.title("AI Stock Screener")
 st.write("Enter up to 5 stock tickers to analyze")
