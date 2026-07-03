@@ -43,8 +43,19 @@ if tickers_input:
       "Score": score,
       "Rating": rating
     })
-df = pd.DataFrame(data).sort_values("Score", ascending=False)
-st.dataframe(df)
+def color_rating(val):
+    if val == "Strong "Buy":
+      color = "background-color: green; color: white"
+    elif val == "Buy":
+      color = "background-color: steelblue; color: white"
+    elif val == "Hold":
+      color = "background-color: orange; color: white"
+    else:
+      color = "background-color: red; color: white"
+    return color
+  styled_df = df.style.applymap(color_rating, subset=["Rating"])
+  st.dataframe(styled_df)
+  
 
 st.subheader("Summary")
 st.write(f"Strong Buys: {len(df[df['Rating'] == 'Strong Buy'])}")
