@@ -44,7 +44,7 @@ if tickers_input:
       "Rating": rating
     })
 def color_rating(val):
-    if val == "Strong "Buy":
+    if val == "Strong Buy":
       color = "background-color: green; color: white"
     elif val == "Buy":
       color = "background-color: steelblue; color: white"
