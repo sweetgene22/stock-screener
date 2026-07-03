@@ -52,6 +52,7 @@ st.write(f"Buys: {len(df[df['Rating'] == 'Buy'])}")
 st.write(f"Avoid: {len(df[df['Rating'] == 'Avoid'])}")
 
 st.subheader("Score Comparison")
-  st.bar_chart(df.set_index("Ticker")["Score"])
+st.bar_chart(df.set_index("Ticker")["Score"])
+ 
 
 
