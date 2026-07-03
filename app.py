@@ -16,6 +16,7 @@ if tickers_input:
         try:
             stock = yf.Ticker(ticker)
             info = stock.info
+            price = info.get("regularMarketPrice")
             pe = round(info.get("trailingPE", 0), 2)
             margin = round(info.get("profitMargins", 0) * 100, 2)
             growth = round(info.get("revenueGrowth", 0) * 100, 2)
@@ -33,7 +34,7 @@ if tickers_input:
             data.append({
                 "Ticker": ticker,
                 "Company": info.get("longName", "N/A"),
-                "Current Price": info.get("price"),
+                "Current Price": price,
                 "PE Ratio": pe,
                 "Profit Margin %": margin,
                 "Revenue Growth %": growth,
