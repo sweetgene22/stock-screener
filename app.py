@@ -43,8 +43,11 @@ if tickers_input:
       "Score": score,
       "Rating": rating
     })
-
-df = pd.DataFrame(data).sort_values("Score", ascending=False)
+if data:
+  df = pd.DataFrame(data).sort_values("Score", ascending=False)
+else:
+  st.warning("No data found for the tickers entered.")
+  st.stop()
 
 def color_rating(val):
     if val == "Strong Buy":
