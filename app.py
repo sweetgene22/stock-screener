@@ -53,8 +53,8 @@ def color_rating(val):
     else:
       color = "background-color: red; color: white"
     return color
-  styled_df = df.style.applymap(color_rating, subset=["Rating"])
-  st.dataframe(styled_df)
+styled_df = df.style.applymap(color_rating, subset=["Rating"])
+st.dataframe(styled_df)
   
 
 st.subheader("Summary")
