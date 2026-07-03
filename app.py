@@ -55,7 +55,8 @@ def color_rating(val):
     return color
 styled_df = df.style.applymap(color_rating, subset=["Rating"])
 st.dataframe(styled_df)
-  
+
+df = DataFrame(df)
 
 st.subheader("Summary")
 st.write(f"Strong Buys: {len(df[df['Rating'] == 'Strong Buy'])}")
