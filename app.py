@@ -32,7 +32,7 @@ if tickers_input:
     if score >= 8: rating = "Strong Buy"
     elif score >= 5: rating = "Buy"
     elif score >= 3: rating = "Hold"
-    else rating = "Avoid"
+    else: rating = "Avoid"
     
     data.append({
       "Ticker": ticker,
