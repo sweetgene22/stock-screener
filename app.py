@@ -33,7 +33,7 @@ if tickers_input:
             data.append({
                 "Ticker": ticker,
                 "Company": info.get("longName", "N/A"),
-                "Current Price": price,
+                "Current Price": info.get("price"),
                 "PE Ratio": pe,
                 "Profit Margin %": margin,
                 "Revenue Growth %": growth,
