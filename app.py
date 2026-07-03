@@ -47,7 +47,7 @@ df = pd.DataFrame(data).sort_values("Score", ascending=False)
 st.dataframe(df)
 
 st.subheader("Summary")
-st.write(f"Strong Buys: {len(df[df['Rating'] == 'Strong Buy']}")
+st.write(f"Strong Buys: {len(df[df['Rating'] == 'Strong Buy'])}")
 st.write(f"Buys: {len(df[df['Rating'] == 'Buy'])}")
 st.write(f"Avoid: {len(df[df['Rating'] == 'Avoid'])}")
 
